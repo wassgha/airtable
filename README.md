@@ -2,7 +2,9 @@
 
 _Assignment created for Airtable by Wassim Gharbi_
 
-This project is a visualization of events on a scrollable timeline user interface with the ability to modify events.
+This project is a visualization of events on a scrollable timeline user interface with the ability to modify events, zoom in/out and drag and drop.
+
+![https://raw.githubusercontent.com/wassgha/airtable/master/screenshot.png](https://raw.githubusercontent.com/wassgha/airtable/master/screenshot.png)
 
 ## Features
 
