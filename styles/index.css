@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&subset=latin,latin-ext');
+
+* {
+  z-index: 0;
+  outline: none;
+}
+
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-size: 18px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+  color: #333;
+  background: white;
+  margin: 0px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+  position: relative;
+  padding-top: 100px;
+  transition: all 0.5s ease;
+}
+
+.grid {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100vh;
+  min-width: 100%;
+  top: 0;
+  transition: all 0.5s ease;
+}
+
+.gridCol {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 100vh;
+  transition: all 1s ease;
+}
+
+.gridHeader {
+  height: 100px;
+  padding-left: 10px;
+  text-align: left;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  color: #999;
+  transition: all 0.2s ease;
+}
+
+.gridContent {
+  flex: 1;
+  border-left: 2px solid #f1f2f5;
+  transition: all 0.2s ease;
+}
+
+.eventRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  align-items: center;
+  height: 50px;
+  transition: all 0.5s ease;
+}
+
+.event {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  padding: 10px;
+  border-left: 4px solid transparent;
+  border-radius: 1px;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: move;
+  transition: width 0.5s ease;
+}
+
+.event .name {
+  border: none;
+  white-space: nowrap;
+  background: transparent;
+  font-size: 18px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+  flex: 1;
+}
+
+.event .name:focus {
+  background-color: white;
+}
+
+.zoomControls {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background: white;
+  z-index: 2;
+}
+
+.zoomControls .zoomIn,
+.zoomControls .zoomOut {
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.zoomControls .zoomIn {
+  border-bottom: 1px solid #eee;
+}
